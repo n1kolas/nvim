@@ -12,6 +12,7 @@ There's a high chance this isn't complete.
 - intelephense (for PHP language support)
 - fzf (for Fuzzy finder)
 - vscode-php-debug (for debugging PHP: **Careful hardcoded path in dap.lua**)
+- nodejs (for vscode-php-debug)
 
 ## Installation
 ```
