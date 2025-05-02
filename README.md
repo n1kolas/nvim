@@ -24,42 +24,42 @@ Open up neovim `nvim .` and use `:Lazy` if necessary, which should autoinstall p
 ## Keybinds
 Non-exhaustive list of keybinds.
 
-- <leader> is the Space key
+- `<leader>` is the Space key
 
 ### Finder
-- Filenames: <leader>pf or CTRL+P
-- Grep: <leader>pg
+- Filenames: `<leader>pf` or `CTRL+P`
+- Grep: `<leader>pg`
 
 ### LSP & Completion
-- Shift+K Hover definition
-- <leader>gd Go to definition
-- <leader>gr Show references
-- CTRL+n/p selecting auto completion
-- CTRL+y confirming auto completion
+- `Shift+K` Hover definition
+- `<leader>gd` Go to definition
+- `<leader>gr` Show references
+- `CTRL+n/p` selecting auto completion
+- `CTRL+y` confirming auto completion
 
 ### Showing errors/warnings
-- <leader>tt Toggle Trouble Window
+- `<leader>tt` Toggle Trouble Window
 
 ### Terminal
-- <leader>st Toggle Terminal
+- `<leader>st` Toggle Terminal
 
 ### Formatting
-- <leader>f to Format.
-- <leader>do to generate Doc Block.
+- `<leader>f` to Format.
+- `<leader>do` to generate Doc Block.
 
 ### Debugging
-- <leader>du to toggle Debug UI
-- <leader>b to toggle breakpoint
-- F1 to start debugging
-- F2 Step over
-- F3 Step into
-- <leader>? show variable content
+- `<leader>du` to toggle Debug UI
+- `<leader>b` to toggle breakpoint
+- `F1` to start debugging
+- `F2` Step over
+- `F3` Step into
+- `<leader>?` show variable content
 
 ### Harpoon (Quick File Access)
-- <leader>ha to add to harpoon
-- <leader>hl to show harpoon list
-- <leader>{1,2,3,4,5,6,7,8,9} to switch between harpooned files
+- `<leader>ha` to add to harpoon
+- `<leader>hl` to show harpoon list
+- `<leader>{1,2,3,4,5,6,7,8,9}` to switch between harpooned files
 
 ### Multi Select
-- CTRL+n after selecting word to select duplicate occurences
+- `CTRL+n` after selecting word to select duplicate occurences
 
