@@ -11,7 +11,7 @@ There's a high chance this isn't complete.
 - rust-analyzer (for Rust language support)
 - intelephense (for PHP language support)
 - fzf (for Fuzzy finder)
-- vscode-php-debug (for debugging PHP: Careful hardcoded path in dap.lua)
+- vscode-php-debug (for debugging PHP: **Careful hardcoded path in dap.lua**)
 
 ## Installation
 ```
