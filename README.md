@@ -21,6 +21,9 @@ git clone git@github.com:n1kolas/nvim.git .nvim
 
 Open up neovim `nvim .` and use `:Lazy` if necessary, which should autoinstall plugins.
 
+### Xdebug
+Edit your `lua/n/plugins/dap.lua` and set the `dap.adapters.php.args`
+
 ## Keybinds
 Non-exhaustive list of keybinds.
 
