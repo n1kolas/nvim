@@ -36,42 +36,33 @@ vim.keymap.set("n", "<C-k>", ":m .-2<CR>==") -- move line down(n)
 vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
-
-local set = vim.opt_local
-
--- Set local settings for terminal buffers
-vim.api.nvim_create_autocmd("TermOpen", {
-  group = vim.api.nvim_create_augroup("custom-term-open", {}),
-  callback = function()
-    set.number = false
-    set.relativenumber = false
-    set.scrolloff = 0
-
-    vim.bo.filetype = "terminal"
-  end,
-})
-
--- Easily hit escape in terminal mode.
-vim.keymap.set("t", "<esc>", "<c-\\><c-n>")
-
--- -- Open a terminal at the bottom of the screen with a fixed height.
--- vim.keymap.set("n", "st", function()
---   vim.cmd.new()
---   vim.cmd.wincmd "J"
---   vim.api.nvim_win_set_height(0, 12)
---   vim.wo.winfixheight = true
---   vim.cmd.term()
---   vim.cmd("startinsert")
--- end)
-
-exitTerm = function()
-  vim.cmd(":lua Snacks.terminal.toggle()")
-end
-
-vim.keymap.set({ "n" }, "<leader>st", ":lua Snacks.terminal.toggle()<cr>", { desc = "Toggle Terminal" })
-vim.keymap.set({ "t" }, "<leader>st", exitTerm)
-
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap("n", "<leader>do", ":lua require('neogen').generate()<CR>", opts)
 
-vim.keymap.set('i', '<C-k>', '<Up>', {noremap = true, silent = true, nowait = true})
+vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true, silent = true, nowait = true })
+
+-- Terminal
+local set = vim.opt_local
+-- Set local settings for terminal buffers
+vim.api.nvim_create_autocmd("TermOpen", {
+	group = vim.api.nvim_create_augroup("custom-term-open", {}),
+	callback = function()
+		set.number = false
+		set.relativenumber = false
+		set.scrolloff = 0
+
+		vim.bo.filetype = "terminal"
+	end,
+})
+
+-- Easily hit escape in terminal mode.
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
+-- Open a terminal at the bottom of the screen with a fixed height.
+vim.keymap.set("n", "<leader>st", function()
+	vim.cmd.new()
+	vim.cmd.wincmd("J")
+	vim.api.nvim_win_set_height(0, 12)
+	vim.wo.winfixheight = true
+	vim.cmd.term()
+end)
