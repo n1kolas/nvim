@@ -66,3 +66,5 @@ vim.keymap.set("n", "<leader>st", function()
 	vim.wo.winfixheight = true
 	vim.cmd.term()
 end)
+
+vim.keymap.set("n", "-", "<cmd>Oil<CR>")
