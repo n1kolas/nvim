@@ -65,3 +65,7 @@ Non-exhaustive list of keybinds.
 ### Multi Select
 - `CTRL+n` after selecting word to select duplicate occurences
 
+### Quickfix
+- `CTRL+q` to add after searching
+- `CTRL+SHIFT+{j,k}` to go next or prev
+
