@@ -72,3 +72,6 @@ vim.keymap.set("n", "-", "<cmd>Oil<CR>")
 -- quickfix
 vim.keymap.set("n", "<C-S-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<C-S-k>", "<cmd>cprev<CR>")
+
+-- tmux-sessionizer
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

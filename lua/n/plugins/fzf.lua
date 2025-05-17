@@ -20,9 +20,6 @@ return {
 		end, { desc = "Files" })
 
 		-- Search Contents
-		vim.keymap.set("n", "<C-f>", function()
-			require("fzf-lua").live_grep_native({ hidden = true, no_ignore = true })
-		end, { desc = "Grep" })
 		vim.keymap.set("n", "<leader>pg", function()
 			require("fzf-lua").live_grep_native({ hidden = true, no_ignore = true })
 		end, { desc = "Grep" })
