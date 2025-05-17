@@ -64,5 +64,8 @@ return {
 				require("fzf-lua").live_grep_native({ hidden = true, no_ignore = true, cwd = current_dir })
 			end
 		end, { desc = "Grep in Folder" })
+
+		-- Breakpoints
+		vim.keymap.set("n", "<leader>pb", "<cmd>lua require('fzf-lua').dap_breakpoints()<CR>", { silent = true })
 	end,
 }
