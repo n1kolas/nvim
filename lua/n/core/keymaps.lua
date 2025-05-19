@@ -69,10 +69,18 @@ end)
 
 vim.keymap.set("n", "-", "<cmd>Oil<CR>")
 
--- quickfix
-vim.keymap.set("n", "<C-S-j>", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<C-S-k>", "<cmd>cprev<CR>")
+-- vim.keymap.set("n", "<C-S-j>", "<cmd>cnext<CR>")
+-- vim.keymap.set("n", "<C-S-k>", "<cmd>cprev<CR>")
 
 -- tmux-sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
+-- vim.keymap.set("n", "<C-S-j>", "<cmd>cnext<CR>")
+-- vim.keymap.set("n", "<C-S-k>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<C-S-j>", function()
+	require("trouble").next({ skip_groups = true, jump = true })
+end)
+
+vim.keymap.set("n", "<C-S-k>", function()
+	require("trouble").prev({ skip_groups = true, jump = true })
+end)

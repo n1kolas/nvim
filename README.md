@@ -37,7 +37,7 @@ Non-exhaustive list of keybinds.
 - `<leader>gr` Show references
 - `CTRL+n/p` selecting auto completion
 - `CTRL+y` confirming auto completion
-- `<leader>aa` show PHP Symbols (Aerial)
+- `<leader>ts` show PHP Symbols
 
 ### Showing errors/warnings
 - `<leader>tt` Toggle Trouble Window
