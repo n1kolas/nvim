@@ -1,3 +1,21 @@
+-- return {
+-- 	"catppuccin/nvim",
+-- 	name = "catppuccin",
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("catppuccin").setup({
+-- 			color_overrides = {
+-- 				mocha = {
+-- 					base = "#080808",
+-- 					mantle = "#080808",
+-- 					crust = "#080808",
+-- 				},
+-- 			},
+-- 			flavour = "mocha",
+-- 		})
+-- 		vim.cmd.colorscheme("catppuccin")
+-- 	end,
+-- }
 function ColorMyPencils(color)
 	color = color or "rose-pine-moon"
 	vim.cmd.colorscheme(color)

@@ -78,6 +78,7 @@ return {
 				"rust_analyzer",
 				"gopls",
 				"intelephense",
+        "twiggy_language_server",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)

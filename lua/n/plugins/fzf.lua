@@ -3,10 +3,12 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {},
 	config = function()
+		local trouble_actions = require("trouble.sources.fzf").actions
 		require("fzf-lua").setup({
 			keymap = {
 				fzf = {
 					["ctrl-q"] = "select-all+accept",
+					-- ["ctrl-q"] = trouble_actions.open,
 				},
 			},
 		})

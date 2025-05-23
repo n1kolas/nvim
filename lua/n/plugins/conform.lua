@@ -7,7 +7,8 @@ return {
 				lua = { "stylua" },
 				php = { "phpcbf" },
         rust = { "rustfmt" },
-        go = { "goimports", "gofmt" }
+        go = { "goimports", "gofmt" },
+        yaml = { "yamlfmt" }
 			},
 			formatters = {
 				phpcbf = function(bufnr)
