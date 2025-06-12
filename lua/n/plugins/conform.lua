@@ -6,9 +6,10 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				php = { "phpcbf" },
-        rust = { "rustfmt" },
-        go = { "goimports", "gofmt" },
-        yaml = { "yamlfmt" }
+				rust = { "rustfmt" },
+				go = { "goimports", "gofmt" },
+				yaml = { "yamlfmt" },
+				scss = { "prettierd" },
 			},
 			formatters = {
 				phpcbf = function(bufnr)
@@ -30,4 +31,3 @@ return {
 		})
 	end,
 }
-

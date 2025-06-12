@@ -23,8 +23,8 @@ return {
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"j-hui/fidget.nvim",
-    "ray-x/lsp_signature.nvim",
-    "nvim-treesitter/nvim-treesitter",
+		"ray-x/lsp_signature.nvim",
+		"nvim-treesitter/nvim-treesitter",
 	},
 
 	config = function()
@@ -41,34 +41,34 @@ return {
 		)
 
 		-- Jumps to the declaration of the symbol under the cursor.
-          vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
-          -- Jumps to the definition of the symbol under the cursor.
-          vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+		-- Jumps to the definition of the symbol under the cursor.
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 
-          -- Displays hover information about the symbol under the cursor in a floating
-          -- window. Calling the function twice will jump into the floating window.
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		-- Displays hover information about the symbol under the cursor in a floating
+		-- window. Calling the function twice will jump into the floating window.
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
-          -- Lists all the implementations for the symbol under the cursor in the quickfix window.
-          vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+		-- Lists all the implementations for the symbol under the cursor in the quickfix window.
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 
-          -- Displays signature information about the symbol under the cursor in a floating window.
-          vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+		-- Displays signature information about the symbol under the cursor in a floating window.
+		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 
-          -- Jumps to the definition of the type of the symbol under the cursor.
-          vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
+		-- Jumps to the definition of the type of the symbol under the cursor.
+		vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
 
-          -- Renames all references to the symbol under the cursor.
-          vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+		-- Renames all references to the symbol under the cursor.
+		vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
 
-          -- Selects a code action available at the current cursor position.
-          vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+		-- Selects a code action available at the current cursor position.
+		vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
 
-          -- Lists all the references to the symbol under the cursor in the quickfix window.
-          vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+		-- Lists all the references to the symbol under the cursor in the quickfix window.
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
-    require("lsp_signature").setup({})
+		require("lsp_signature").setup({})
 
 		require("fidget").setup({})
 		require("mason").setup()
@@ -78,7 +78,8 @@ return {
 				"rust_analyzer",
 				"gopls",
 				"intelephense",
-        "twiggy_language_server",
+				"twiggy_language_server",
+				"somesass_ls",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -176,4 +177,3 @@ return {
 		})
 	end,
 }
-
