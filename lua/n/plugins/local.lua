@@ -1,7 +1,7 @@
 local local_plugins = {
 	{
 		"drupal",
-		dir = "~/proj/lua/drupal",
+		dir = "~/.config/nvim/.local/drupal",
 		config = function()
 			local drupal = require("drupal")
 
