@@ -80,6 +80,7 @@ return {
 				"intelephense",
 				"twiggy_language_server",
 				"somesass_ls",
+        "elixirls"
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -169,7 +170,7 @@ return {
 			float = {
 				focusable = false,
 				style = "minimal",
-				border = "rounded",
+				-- border = "rounded",
 				source = "always",
 				header = "",
 				prefix = "",
