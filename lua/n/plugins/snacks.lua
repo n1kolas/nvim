@@ -5,7 +5,7 @@ return {
 	---@type snacks.Config
 	opts = {
 		bigfile = { enabled = true },
-		dashboard = { enabled = true },
+		dashboard = { enabled = false },
 		explorer = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
@@ -17,7 +17,7 @@ return {
 		quickfile = { enabled = true },
 		scope = { enabled = true },
 		scroll = { enabled = true },
-		statuscolumn = { enabled = true },
+		statuscolumn = { enabled = false },
 		words = { enabled = true },
 		styles = {
 			notification = {
@@ -30,9 +30,17 @@ return {
 		{
 			"<leader>ps",
 			function()
-				Snacks.picker.smart()
+				Snacks.picker.smart({ ignored = true })
 			end,
 			desc = "Smart Find Files",
+		},
+		{
+			"<leader>pb",
+			function()
+				require("dap").list_breakpoints(false)
+				Snacks.picker.qflist()
+			end,
+			desc = "List breakpoints",
 		},
 		-- {
 		-- 	"<leader>,",
@@ -44,7 +52,7 @@ return {
 		{
 			"<leader>pg",
 			function()
-				Snacks.picker.grep()
+				Snacks.picker.grep({ ignored = true })
 			end,
 			desc = "Grep",
 		},
@@ -57,7 +65,7 @@ return {
 				end
 				local current_dir = oil.get_current_dir()
 				if current_dir then
-					Snacks.picker.grep({ cwd = current_dir })
+					Snacks.picker.grep({ cwd = current_dir, ignored = true })
 				end
 			end,
 			desc = "Grep in current folder",
@@ -101,9 +109,30 @@ return {
 		{
 			"<C-p>",
 			function()
-				Snacks.picker.files()
+				Snacks.picker.files({ ignored = true })
 			end,
 			desc = "Find Files",
+		},
+		{
+			"<leader>pf",
+			function()
+				Snacks.picker.files({ ignored = true })
+			end,
+			desc = "Find Files",
+		},
+		{
+			"<leader>pF",
+			function()
+				local oil_ok, oil = pcall(require, "oil")
+				if not oil_ok then
+					return
+				end
+				local current_dir = oil.get_current_dir()
+				if current_dir then
+					Snacks.picker.files({ cwd = current_dir, ignored = true })
+				end
+			end,
+			desc = "Find Files in current folder",
 		},
 		-- {
 		-- 	"<leader>fg",

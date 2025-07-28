@@ -58,15 +58,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 -- Easily hit escape in terminal mode.
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
--- Open a terminal at the bottom of the screen with a fixed height.
-vim.keymap.set("n", "<leader>st", function()
-	vim.cmd.new()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 12)
-	vim.wo.winfixheight = true
-	vim.cmd.term()
-end)
-
 vim.keymap.set("n", "-", "<cmd>Oil<CR>")
 
 -- vim.keymap.set("n", "<C-S-j>", "<cmd>cnext<CR>")
@@ -84,3 +75,5 @@ end)
 vim.keymap.set("n", "<C-S-k>", function()
 	require("trouble").prev({ skip_groups = true, jump = true })
 end)
+
+vim.keymap.set("n", "<leader>to", "<cmd>ToggleTerm<CR>")
