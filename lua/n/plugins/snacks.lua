@@ -4,6 +4,11 @@ return {
 	lazy = false,
 	---@type snacks.Config
 	opts = {
+		animate = {
+			duration = 2,
+			easing = "linear",
+			fps = 60,
+		},
 		bigfile = { enabled = true },
 		dashboard = { enabled = false },
 		explorer = { enabled = true },
@@ -552,7 +557,7 @@ return {
 		vim.api.nvim_create_autocmd("User", {
 			pattern = "VeryLazy",
 			callback = function()
-				vim.g.snacks_animate = false
+				vim.g.snacks_animate = true
 				-- Setup some globals for debugging (lazy-loaded)
 				_G.dd = function(...)
 					Snacks.debug.inspect(...)
